@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>Boggle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="https://cdn.skypack.dev/twind/shim"></script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>" /> 
+</head>
+<body>
+ <h1 class="text-center">Boggle</h1> 
+ <div class="max-w-sm mx-auto border rounded p-4 mt-6">
+  <div class="text-center">Game Options</div>
+  <form action="/single" method="POST">
+    <label for="length">Length</label>
+    <label class="block">
+      <input type="radio" name="length" value="2" id="length-2">
+      2 minutes
+    </label>
+    <label class="block">
+      <input type="radio" name="length" value="3" id="length-3">
+      3 minutes 
+    </label>
+    <label>
+      Minimum word length:
+    </label>
+    <label class="block">
+      <input type="radio" name="wordlength" value="3" id="wordLength-3">
+      3 Letters 
+    </label>
+    <label class="block">
+      <input type="radio" name="wordlength" value="4" id="wordLength-4">
+      4 Letters 
+    </label>
+  <input class="block ml-auto px-3 py-2 rounded bg-indigo-500 text-white" type="submit" value="Start">
+  </form>
+ </div>
+</body>
+</html>

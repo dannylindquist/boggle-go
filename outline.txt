@@ -1,0 +1,21 @@
+
+
+options
+- 2 or 3 minutes
+- min letter count
+
+Capabilites
+- start as individual
+  - set options and start
+- multi-player
+  - join room
+  - create room
+
+
+- routes
+GET "/"
+  - selection ui
+GET "/multi"
+
+
+/game/DAF3a
