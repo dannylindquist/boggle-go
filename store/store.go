@@ -6,6 +6,7 @@ import (
 	"time"
 
 	"github.com/dannylindquist/boggle-go"
+	"github.com/dannylindquist/boggle-go/game"
 )
 
 type GameStore struct {
@@ -40,6 +41,7 @@ func (s *GameStore) CreateGame(options boggle.GameOptions) *boggle.Game {
 		Players: make(map[string]boggle.GamePlayer),
 		Options: options,
 	}
+	newGame.Matrix = game.GenerateMatrix()
 
 	s.Games[newGame.Id] = newGame
 	return newGame

@@ -49,3 +49,25 @@
   width: 100%;
   text-align: center;
 }
+
+.board {
+  max-width: min(96vw, 96vh);
+  margin-inline: auto;
+  padding: 4px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 4px;
+  aspect-ratio: 1 / 1;
+}
+
+.board-cell {
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 2px solid #888;
+  display: flex;
+  font-size: 3rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}

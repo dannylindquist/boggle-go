@@ -15,10 +15,10 @@ import (
 func registerRoutes(mux *http.ServeMux, gameStore *store.GameStore) {
 	mux.HandleFunc("GET /assets/", func(w http.ResponseWriter, r *http.Request) {
 		slog.Info(
-			"request",
+			"request file",
+			"path", r.URL.Path,
 			"method", r.Method,
 			"url", r.URL,
-			"message", "serving static assets",
 		)
 		http.StripPrefix("/assets/",
 			http.FileServer(http.FS(assets.AssetFS)),
@@ -53,7 +53,8 @@ func gameHandler(gameStore *store.GameStore) http.HandlerFunc {
 			http.Redirect(w, r, "/", http.StatusFound)
 			return
 		}
-		views.Render(w, r, "index.html", game)
+		fmt.Println(game.Matrix)
+		views.Render(w, r, "game.html", game)
 	}
 }
 
